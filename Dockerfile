@@ -1,3 +1,3 @@
 ARG PYTHON_VERSION=3.9.0-alpine3.12
 
-FROM python:${PYTHON_VERSION} AS base
+FROM dockerhub.tax.service.gov.uk/python:${PYTHON_VERSION} AS base
