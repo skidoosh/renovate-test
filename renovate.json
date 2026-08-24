@@ -9,6 +9,13 @@
       "matchPackageNames": ["*"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
+    },
+    {
+      "matchPackageNames": ["*"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": true,
+      "groupName": "All patch level updates",
+      "groupSlug": "all-patch-level-updates"
     }
   ]
 }
