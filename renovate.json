@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "major": {"enabled": false},
-  "minor": {"enabled": false},
+  "extends": [
+    "config:base"
+  ],
   "packageRules": [
     {
       "matchPackageNames": ["*"],
