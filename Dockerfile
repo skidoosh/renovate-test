@@ -1,3 +1,3 @@
 ARG PYTHON_VERSION=3.13.0
 
-FROM python:${PYTHON_VERSION}-slim AS base
+FROM python:${PYTHON_VERSION}-alpine3.23 AS base
