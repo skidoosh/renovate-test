@@ -4,6 +4,9 @@
     "config:recommended"
   ],
   "separateMinorPatch": true,
+  "commitHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
   "packageRules": [
     {
       "matchPackageNames": ["*"],
