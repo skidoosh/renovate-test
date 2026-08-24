@@ -1,3 +1,3 @@
-ARG 3.13.0-alpine3.23
+ARG PYTHON_VERSION=3.13.0-alpine3.23
 
 FROM python:${PYTHON_VERSION} AS base
