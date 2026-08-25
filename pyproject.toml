@@ -17,7 +17,7 @@ requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv]
-exclude-newer="7 days"
+exclude-newer="72 hours"
 package = false
 
 [dependency-groups]
