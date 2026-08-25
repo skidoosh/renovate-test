@@ -9,5 +9,13 @@
     ":separatePatchReleases",
     ":rebaseStalePrs"
   ],
-  "minimumReleaseAge": "7 days"
+  "minimumReleaseAge": "7 days",
+  "packageRules": [
+    {
+      "groupName": "all patch dependencies",
+      "groupSlug": "all-patch",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["patch"]
+    }
+  ]
 }
