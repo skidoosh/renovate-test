@@ -17,9 +17,7 @@
     {
       "matchPackageNames": ["*"],
       "matchUpdateTypes": ["patch"],
-      "enabled": true,
-      "groupName": "All patch level updates",
-      "groupSlug": "all-patch-level-updates"
+      "enabled": true
     }
   ]
 }
