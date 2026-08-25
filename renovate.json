@@ -1,23 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":automergeDisabled",  
+    ":disableMajorUpdates", 
+    ":disableRateLimiting",
+    ":semanticCommitTypeAll(chore)",
+    ":separatePatchRelease",
+    ":rebaseStalePrs"
   ],
-  "separateMinorPatch": true,
-  "commitHourlyLimit": 0,
-  "minimumReleaseAge": "7 days",
-  "prConcurrentLimit": 0,
-  "prHourlyLimit": 0,
-  "packageRules": [
-    {
-      "matchPackageNames": ["*"],
-      "matchUpdateTypes": ["major", "minor"],
-      "enabled": false
-    },
-    {
-      "matchPackageNames": ["*"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": true
-    }
-  ]
+  "minimumReleaseAge": "7 days"
 }
