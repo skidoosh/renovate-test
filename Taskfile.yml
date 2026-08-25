@@ -18,7 +18,7 @@ tasks:
           -v "${HOME}/.gitconfig:/root/.gitconfig" \
           -v "${HOME}/.ssh:/root/.ssh" \
           -v "${PWD}:/app" \
-          -e DOCKER_HUB_USERNAME="${DOCKER_HUB_USERNAME}" \
+          -e DOCKER_HUB_USERNAME="wibble" \
           -e DOCKER_HUB_PASSWORD="${DOCKER_HUB_PASSWORD}" \
           -e LOG_LEVEL=debug \
           -e RENOVATE_X_IGNORE_RE2=true \
