@@ -6,7 +6,7 @@
     ":disableMajorUpdates", 
     ":disableRateLimiting",
     ":semanticCommitTypeAll(chore)",
-    ":separatePatchRelease",
+    ":separatePatchReleases",
     ":rebaseStalePrs"
   ],
   "minimumReleaseAge": "7 days"
