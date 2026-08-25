@@ -1,2 +1,1 @@
-# renovate: datasource=endoflife-date depName=python versioning=semver
-3.9.25
+3.14.0

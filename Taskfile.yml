@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+env:
+  RENOVATE_VERSION: 44.39.0
+
+vars:
+  GREETING: Hello, world!
+
+tasks:
+  run:
+    desc: Run renovate in a container
+    cmds:
+      - |
+        docker run --rm \
+          -v "${HOME}/.config:/app/.config" \
+          -v "${PWD}:/app" \
+          -e DOCKER_HUB_USERNAME="${DOCKER_HUB_USERNAME}" \
+          -e DOCKER_HUB_PASSWORD="${DOCKER_HUB_PASSWORD}" \
+          -e LOG_LEVEL=debug \
+          -e RENOVATE_X_IGNORE_RE2=true \
+          -e RENOVATE_ADDITIONAL_CONFIG_FILE="/app/.config/renovate/config.js" \
+          -e RENOVATE_REPOSITORIES="${RENOVATE_REPOSITORIES}" \
+          -e RENOVATE_TOKEN="${RENOVATE_TOKEN}" \
+          -e RENOVATE_VERSION="${RENOVATE_VERSION}" \
+          renovate/renovate:${RENOVATE_VERSION} skidoosh/renovate-test
