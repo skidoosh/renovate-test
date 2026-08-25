@@ -8,7 +8,7 @@
     ":semanticCommitTypeAll(chore)",
     ":rebaseStalePrs"
   ],
-  "minimumReleaseAge": "7 days",
+  "minimumReleaseAge": "3 days",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
   "osvVulnerabilityAlerts": true,
   "packageRules": [
