@@ -23,6 +23,7 @@ tasks:
           -e LOG_LEVEL=debug \
           -e RENOVATE_X_IGNORE_RE2=true \
           -e RENOVATE_ADDITIONAL_CONFIG_FILE="/app/.config/renovate/config.js" \
+          -e RENOVATE_GIT_PRIVATE_KEY="$(cat "${HOME}/.ssh/id_ed25519")" \
           -e RENOVATE_REPOSITORIES="${RENOVATE_REPOSITORIES}" \
           -e RENOVATE_TOKEN="${RENOVATE_TOKEN}" \
           -e RENOVATE_VERSION="${RENOVATE_VERSION}" \
