@@ -13,8 +13,10 @@ tasks:
     desc: Run renovate in a container
     cmds:
       - |
-        docker run --rm \
+        docker run --rm -it \
           -v "${HOME}/.config:/app/.config" \
+          -v "${HOME}/.gitconfig:/root/.gitconfig" \
+          -v "${HOME}/.ssh:/root/.ssh" \
           -v "${PWD}:/app" \
           -e DOCKER_HUB_USERNAME="${DOCKER_HUB_USERNAME}" \
           -e DOCKER_HUB_PASSWORD="${DOCKER_HUB_PASSWORD}" \
