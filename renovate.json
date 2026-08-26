@@ -18,9 +18,8 @@
       "matchUpdateTypes": ["digest", "patch", "minor"]
     },
     {
-      "groupName": "all patch dependencies",
-      "groupSlug": "all-patch",
-      "matchPackagePatterns": ["*"],
+      "matchManagers": ["pyenv", "pep621"],
+      "groupName": "application dependencies",
       "matchUpdateTypes": ["patch"]
     }
   ],
