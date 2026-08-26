@@ -16,7 +16,8 @@
     {
       "matchManagers": ["terraform", "terraform-version"],
       "groupName": "terraform dependencies",
-      "matchUpdateTypes": ["digest", "patch", "minor"]
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "separateMinorPatch": false
     },
     {
       "matchManagers": ["dockerfile", "pyenv", "pep621"],

@@ -1,0 +1,1 @@
+separateMinorPatch operates at the global or group level 
