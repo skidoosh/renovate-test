@@ -4,12 +4,37 @@ requires-python = ">=3.14.0"
 
 [options]
 exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for backwards compatibility when using relative exclude-newer values.
-exclude-newer-span = "P7D"
+exclude-newer-span = "PT72H"
+
+[[package]]
+name = "fastapi"
+version = "0.18.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "starlette" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c4/3d/2f36f343b2927f2bcef8707510a8560dc07f76a2da95c1c3274942d7a1e3/fastapi-0.18.0.tar.gz", hash = "sha256:dd03d2f4137de757a90c78bfe280e90fa00a6dea51ac885f76aee3f8c1621b15", size = 4196848, upload-time = "2019-04-22T17:13:17.685Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d9/ee/0b818cfe2449e7f7b971699c2af12cc6a99d8bae77c580d2e6ca355ef53c/fastapi-0.18.0-py3-none-any.whl", hash = "sha256:f36229a7b7f34c84ed94ba501330ddcba47897a25e6fafe94860175c78f0c489", size = 120241, upload-time = "2019-04-22T17:13:15.498Z" },
+]
+
+[[package]]
+name = "pydantic"
+version = "0.23"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/99/f6/a2c0fd4e2f4ad01d065f68140cddefa2d7bb83e6d4732bfedd5915d60886/pydantic-0.23.tar.gz", hash = "sha256:58b71804e9a6b4e1ccf8b3dbbca8c0f9cf4b494e5bea219a96e2e2ecb5af688e", size = 55246, upload-time = "2019-04-04T13:09:59.226Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/52/c1/1e8a09a1cc1baf18adfe81fd0b1a27ce1c49adbe2e8b87719484decae3b7/pydantic-0.23-py36.py37.py38-none-any.whl", hash = "sha256:1205cd1213e8acee40a9ad7160b24de74484fd79ec3f09150b255896a3f506ab", size = 48950, upload-time = "2019-04-04T13:09:57.514Z" },
+]
 
 [[package]]
 name = "renovate-test"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "fastapi" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -18,6 +43,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "fastapi", specifier = "==0.18.0" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -49,6 +75,12 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/b2/99/e2a2bfc4fbf0a1e8a916bc9ebe6fe6c58cc34c28e0ffc6ce281d572d1c2e/ruff-0.16.3-py3-none-win_amd64.whl", hash = "sha256:e80a7d69ca2a6d1c4d352ec91458cdca6e56c83cdbcabd93e4abe1e53591d948", size = 11445993, upload-time = "2026-08-13T15:17:08.353Z" },
     { url = "https://files.pythonhosted.org/packages/69/3e/4132e539aed78c148854d4997a2685b0ed4dc4e87110b59ce528564e184e/ruff-0.16.3-py3-none-win_arm64.whl", hash = "sha256:b8ca152da82c1acc1fa8d5874b15951935f0eef46f10e6954c83859011b6178a", size = 11399302, upload-time = "2026-08-13T15:17:10.908Z" },
 ]
+
+[[package]]
+name = "starlette"
+version = "0.11.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/95/9e/3d2b7ed91e823f4e1bc31b841a82660f2527d1095cf0d6b37d9248b6c00a/starlette-0.11.1.tar.gz", hash = "sha256:9d48b35d1fc7521d59ae53c421297ab3878d3c7cd4b75266d77f6c73cccb78bb", size = 43145, upload-time = "2019-02-19T13:21:25.525Z" }
 
 [[package]]
 name = "ty"

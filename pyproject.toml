@@ -7,7 +7,9 @@ authors = [
     { name = "Glyn Mooney", email = "749058+skidoosh@users.noreply.github.com" }
 ]
 requires-python = ">=3.14.0"
-dependencies = []
+dependencies = [
+    "fastapi==0.18.0",
+]
 
 [project.scripts]
 python = "python:main"
@@ -19,6 +21,7 @@ build-backend = "uv_build"
 [tool.uv]
 exclude-newer="72 hours"
 package = false
+no-binary-package = ["starlette"]
 
 [dependency-groups]
 dev = [
