@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "monorepo:terraform",
     ":automergeDisabled",  
     ":disableMajorUpdates", 
     ":disableRateLimiting",
@@ -18,6 +17,11 @@
       "groupSlug": "all-patch",
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["patch"]
+    },
+    {
+      "matchManagers": ["terraform"],
+      "groupName": "terraform dependencies",
+      "matchUpdateTypes": ["digest", "patch", "minor"]
     }
   ],
   "vulnerabilityAlerts": {
