@@ -11,6 +11,7 @@
   "minimumReleaseAge": "72 hours",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
   "osvVulnerabilityAlerts": true,
+  "separateMinorPatch": true,
   "packageRules": [
     {
       "matchManagers": ["terraform", "terraform-version"],
