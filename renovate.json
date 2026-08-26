@@ -24,8 +24,8 @@
     },
     {
       "matchManagers": ["pep621"],
-      "groupName": "fasapi dependencies",
-      "matchUpdateTypes": ["digest", "patch"],
+      "groupName": "fasapi",
+      "matchUpdateTypes": ["patch"],
       "matchPackageNames": ["fastapi"]
     }
   ],
