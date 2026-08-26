@@ -21,6 +21,12 @@
       "matchManagers": ["dockerfile", "pyenv", "pep621"],
       "groupName": "application dependencies",
       "matchUpdateTypes": ["digest", "patch"]
+    },
+    {
+      "matchManagers": ["pep621"],
+      "groupName": "fasapi dependencies",
+      "matchUpdateTypes": ["digest", "patch"],
+      "matchPackageNames": ["fastapi"]
     }
   ],
   "vulnerabilityAlerts": {
