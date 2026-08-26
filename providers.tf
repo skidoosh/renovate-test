@@ -9,7 +9,7 @@ terraform {
 
 module "kms" {
   source = "terraform-aws-modules/kms/aws"
-  version = "3.0.0"
+  version = "3.1.1"
 
   description         = "External key example"
   key_material_base64 = "Wblj06fduthWggmsT0cLVoIMOkeLbc2kVfMud77i/JY="
