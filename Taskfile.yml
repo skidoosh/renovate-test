@@ -16,6 +16,7 @@ tasks:
         docker run --rm -it \
           -v "${HOME}/.config:/app/.config" \
           -v "${PWD}:/app" \
+          -v "${PWD}/.cache:/tmp/renovate/cache" \
           -e DOCKER_HUB_USERNAME="${DOCKER_HUB_USERNAME}" \
           -e DOCKER_HUB_PASSWORD="${DOCKER_HUB_PASSWORD}" \
           -e LOG_LEVEL=debug \

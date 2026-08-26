@@ -1,4 +1,6 @@
 .terraform/
+.cache/
+.config/
 *.tfstate
 *.tfstate.*
 crash.log
