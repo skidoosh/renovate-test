@@ -8,7 +8,7 @@ authors = [
 ]
 requires-python = ">=3.14.0"
 dependencies = [
-    "fastapi==0.109.1",
+    "fastapi==0.109.2",
 ]
 
 [project.scripts]
@@ -25,6 +25,6 @@ no-binary-package = ["starlette"]
 
 [dependency-groups]
 dev = [
-    "ruff==0.15.0",
-    "ty==0.0.71",
+    "ruff==0.15.22",
+    "ty==0.0.74",
 ]
