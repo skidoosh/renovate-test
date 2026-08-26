@@ -13,26 +13,15 @@
   "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
+      "matchManagers": ["terraform", "terraform-version"],
+      "groupName": "terraform dependencies",
+      "matchUpdateTypes": ["digest", "patch", "minor"]
+    },
+    {
       "groupName": "all patch dependencies",
       "groupSlug": "all-patch",
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["patch"]
-    },
-    {
-      "matchManagers": ["terraform"],
-      "groupName": "terraform dependencies",
-      "matchUpdateTypes": ["digest", "patch", "minor"]
-    }
-  ],
-  "regexManagers": [
-    {
-      "description": "Manage Alpine OS versions in container image tags",
-      "fileMatch": ["Dockerfile"],
-      "matchStrings": [
-        "(?:image:\\s+name:\\s*|image:\\s*|services:\\s+-\\s+|FROM\\s+)(?<depName>[\\S]+):(?<currentValue>[\\S]+)"
-      ],
-      "versioningTemplate": "regex:^(?<compatibility>[\\S]*\\d+\\.\\d+(?:\\.\\d+)?(?:[\\S]*)?-alpine-?)(?<major>\\d+)\\.(?<minor>\\d+)(?:\\.(?<patch>\\d+))?$",
-      "datasourceTemplate": "docker"
     }
   ],
   "vulnerabilityAlerts": {
