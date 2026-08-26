@@ -19,8 +19,13 @@
     },
     {
       "matchManagers": ["dockerfile", "pyenv", "pep621"],
-      "groupName": "application dependencies",
+      "groupName": "application dependencies patch",
       "matchUpdateTypes": ["digest", "patch"]
+    },
+    {
+      "matchManagers": ["dockerfile", "pyenv", "pep621"],
+      "groupName": "application dependencies minor",
+      "matchUpdateTypes": ["digest", "minor"]
     }
   ],
   "vulnerabilityAlerts": {
