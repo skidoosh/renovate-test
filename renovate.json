@@ -2,11 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
+    "group:monorepos",
     ":automergeDisabled",  
     ":disableMajorUpdates", 
     ":disableRateLimiting",
     ":semanticCommitTypeAll(chore)",
-    ":rebaseStalePrs"
+    ":rebaseStalePrs",
   ],
   "minimumReleaseAge": "72 hours",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
