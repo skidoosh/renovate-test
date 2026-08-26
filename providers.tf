@@ -45,7 +45,8 @@ module "kms" {
 }
 
 module "vpc" {
-  source  = "github.com/terraform-aws-modules/terraform-aws-vpc?ref=26c38a6"
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "5.0.0"
 
   name = "renovate"
   cidr = "10.0.0.0/16"
