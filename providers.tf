@@ -15,7 +15,7 @@ variable "vpc_version" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = var.vpc_version
+  version = "5.0.0"
 
   name = "renovate"
   cidr = "10.0.0.0/16"
