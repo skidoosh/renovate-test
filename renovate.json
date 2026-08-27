@@ -10,27 +10,29 @@
   ],
   "minimumReleaseAge": "72 hours",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "osvVulnerabilityAlerts": true,
-  "separateMinorPatch": true,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchManagers": ["terraform", "terraform-version"],
-      "groupName": "terraform dependencies",
+      "groupName": "infrastructure as code updates",
       "matchUpdateTypes": ["digest", "patch", "minor"],
       "separateMinorPatch": false
     },
     {
-      "matchManagers": ["dockerfile", "pyenv", "pep621"],
-      "groupName": "application dependencies patch",
+      "matchManagers": ["dockerfile", "pyenv"],
+      "groupName": "environment updates",
       "matchUpdateTypes": ["digest", "patch"]
     },
     {
-      "matchManagers": ["dockerfile", "pyenv", "pep621"],
-      "groupName": "application dependencies minor",
-      "matchUpdateTypes": ["digest", "minor"]
+      "matchManagers": ["pep621"],
+      "groupName": "application updates",
+      "matchUpdateTypes": ["digest", "minor", "patch"]
     }
-  ],
-  "vulnerabilityAlerts": {
-    "enabled": true
-  }
+  ]
 }
