@@ -4,9 +4,9 @@
     "config:recommended",  
     ":disableMajorUpdates", 
     ":disableRateLimiting",
-    ":rebaseStalePrs",
-    "abandonments:recommended"
+    ":rebaseStalePrs"
   ],
+  "abandonmentThreshold": "1 year",
   "labels": [
     "renovate"
   ],
