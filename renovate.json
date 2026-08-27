@@ -31,9 +31,9 @@
       "minimumReleaseAge": "1 day"
     },
     {
-      "matchDatasources": ["docker"],
+      "matchManagers": ["dockerfile", "pyenv"],
       "matchPackageNames": ["python"],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-alpine(?<build>\\d+)\\.(?<revision>\\d+)$"
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-alpine(?<build>\\d+)\\.(?<revision>\\d+))?$"
     }
   ]
 }
