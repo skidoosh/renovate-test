@@ -24,6 +24,11 @@
       "matchManagers": ["terraform", "terraform-version", "dockerfile", "pyenv", "pep621"],
       "groupName": "all dependencies",
       "matchUpdateTypes": ["digest", "lockFileMaintenance", "patch", "minor"]
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["python"],
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-alpine(?<build>\\d+)\\.(?<revision>\\d+)$"
     }
   ]
 }
