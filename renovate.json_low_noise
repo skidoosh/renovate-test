@@ -1,11 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:best-practices",  
+    "config:recommended",  
     ":disableMajorUpdates", 
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
+  "abandonmentThreshold": "1 year",
   "labels": [
     "renovate"
   ],
@@ -20,19 +21,9 @@
   },
   "packageRules": [
     {
-      "matchManagers": ["terraform", "terraform-version"],
-      "groupName": "infrastructure as code dependencies",
+      "matchManagers": ["terraform", "terraform-version", "dockerfile", "pyenv", "pep621"],
+      "groupName": "all dependencies",
       "matchUpdateTypes": ["digest", "lockFileMaintenance", "patch", "minor"]
-    },
-    {
-      "matchManagers": ["dockerfile", "pyenv"],
-      "groupName": "environment dependencies",
-      "matchUpdateTypes": ["digest", "lockFileMaintenance", "patch"]
-    },
-    {
-      "matchManagers": ["pep621"],
-      "groupName": "application dependencies",
-      "matchUpdateTypes": ["digest", "lockFileMaintenance", "minor", "patch"]
     },
     {
       "matchDatasources": ["docker"],
@@ -41,8 +32,8 @@
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-alpine(?<build>\\d+)\\.(?<revision>\\d+)$"
     },
     {
-      "matchManagers": ["pyenv"],
       "matchDatasources": ["docker"],
+      "matchManagers": ["pyenv"],
       "matchPackageNames": ["python"],
       "minimumReleaseAge": "24 hours"
     }
