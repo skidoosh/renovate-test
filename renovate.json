@@ -1,11 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    ":automergeDisabled",  
+    "config:recommended",  
     ":disableMajorUpdates", 
     ":disableRateLimiting",
-    ":semanticCommitTypeAll(chore)",
     ":rebaseStalePrs"
   ],
   "minimumReleaseAge": "72 hours",
@@ -20,17 +18,17 @@
   "packageRules": [
     {
       "matchManagers": ["terraform", "terraform-version"],
-      "groupName": "infrastructure as code updates",
+      "groupName": "infrastructure as code dependencies",
       "matchUpdateTypes": ["digest", "patch", "minor"]
     },
     {
       "matchManagers": ["dockerfile", "pyenv"],
-      "groupName": "environment updates",
+      "groupName": "environment dependencies",
       "matchUpdateTypes": ["digest", "patch"]
     },
     {
       "matchManagers": ["pep621"],
-      "groupName": "application updates",
+      "groupName": "application dependencies",
       "matchUpdateTypes": ["digest", "minor", "patch"]
     }
   ]
