@@ -5,9 +5,6 @@ version: '3'
 env:
   RENOVATE_VERSION: 44.39.0
 
-vars:
-  GREETING: Hello, world!
-
 tasks:
   run:
     desc: Run renovate in a container

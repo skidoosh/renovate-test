@@ -20,9 +20,19 @@
   },
   "packageRules": [
     {
-      "matchManagers": ["terraform", "terraform-version", "dockerfile", "pyenv", "pep621"],
-      "groupName": "all dependencies",
+      "matchManagers": ["terraform", "terraform-version"],
+      "groupName": "infrastructure as code dependencies",
       "matchUpdateTypes": ["digest", "lockFileMaintenance", "patch", "minor"]
+    },
+    {
+      "matchManagers": ["dockerfile", "pyenv"],
+      "groupName": "environment dependencies",
+      "matchUpdateTypes": ["digest", "lockFileMaintenance", "patch"]
+    },
+    {
+      "matchManagers": ["pep621"],
+      "groupName": "application dependencies",
+      "matchUpdateTypes": ["digest", "lockFileMaintenance", "minor", "patch"]
     }
   ]
 }
