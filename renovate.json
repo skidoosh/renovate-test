@@ -27,12 +27,14 @@
     },
     {
       "matchDatasources": ["docker"],
+      "matchManagers": ["dockerfile"],
       "matchPackageNames": ["python"],
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-alpine(?<build>\\d+)\\.(?<revision>\\d+)$"
     },
     {
       "matchDatasources": ["docker"],
       "matchManagers": ["pyenv"],
+      "matchPackageNames": ["python"],
       "minimumReleaseAge": "1 day"
     }
   ]
