@@ -21,8 +21,7 @@
     {
       "matchManagers": ["terraform", "terraform-version"],
       "groupName": "infrastructure as code updates",
-      "matchUpdateTypes": ["digest", "patch", "minor"],
-      "separateMinorPatch": false
+      "matchUpdateTypes": ["digest", "patch", "minor"]
     },
     {
       "matchManagers": ["dockerfile", "pyenv"],
