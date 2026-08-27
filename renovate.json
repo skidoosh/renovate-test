@@ -6,6 +6,9 @@
     ":disableRateLimiting",
     ":rebaseStalePrs"
   ],
+  "labels": [
+    "renovate"
+  ],
   "minimumReleaseAge": "72 hours",
   "minimumReleaseAgeBehaviour": "timestamp-optional",
   "lockFileMaintenance": {
