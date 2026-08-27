@@ -35,7 +35,7 @@
       "matchDatasources": ["docker"],
       "matchManagers": ["pyenv"],
       "matchPackageNames": ["python"],
-      "minimumReleaseAge": "1 day"
+      "minimumReleaseAge": "24 hours"
     }
   ]
 }
