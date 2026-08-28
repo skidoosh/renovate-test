@@ -8,11 +8,15 @@ authors = [
 ]
 requires-python = ">=3.14.0"
 dependencies = [
-    "fastapi==0.109.1",
+    "fastapi==0.18.0",
 ]
 
 [project.scripts]
 python = "python:main"
+
+[[tool.uv.index]]
+name = "artifactory"
+url = "https://artefacts.tax.service.gov.uk/artifactory/api/pypi/pips/simple/"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
