@@ -2,14 +2,14 @@ terraform {
     required_providers {
         aws = {
             source  = "hashicorp/aws"
-            version = "6.35.0"
+            version = "6.62.0"
         }
     }
 }
 
 module "kms" {
   source = "terraform-aws-modules/kms/aws"
-  version = "3.0.0"
+  version = "3.1.1"
 
   description         = "External key example"
   key_material_base64 = "Wblj06fduthWggmsT0cLVoIMOkeLbc2kVfMud77i/JY="
@@ -46,7 +46,7 @@ module "kms" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.0.0"
+  version = "5.21.0"
 
   name = "renovate"
   cidr = "10.0.0.0/16"
